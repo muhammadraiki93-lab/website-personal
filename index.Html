@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>DUNIAKU</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #2a0018, #050008);
+    color: #ffd6e7;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND STARS */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(#ffffff22 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: stars 60s linear infinite;
+    z-index: -1;
+}
+@keyframes stars {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 1000px; }
+}
+
+/* HEADER */
+header {
+    padding: 25px;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 20px;
+}
+
+/* FORM */
+.form-box {
+    background: rgba(168, 88, 88, 0.08);
+    backdrop-filter: blur(14px);
+    max-width: 360px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #ff4f8b55;
+    animation: fadeIn 1s ease;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: rgba(0,0,0,0.5);
+    color: #ffd6e7;
+}
+
+.form-box input::placeholder {
+    color: #d9a4bd;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #ff4f8b, #c9184a);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* DASHBOARD */
+.dashboard {
+    display: none;
+    text-align: center;
+    padding: 70px 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+.dashboard h1 {
+    font-size: 36px;
+    text-shadow: 0 0 15px #ff4f8b;
+}
+
+.dashboard p {
+    opacity: 0.9;
+}
+
+/* PHOTO */
+.photo-box {
+    margin: 30px auto;
+    width: 260px;
+}
+
+.photo-box img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow:
+        0 0 20px #ff4f8b88,
+        0 0 40px #ff4f8b55;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 15px #ff4f8b88, 0 0 30px #ff4f8b55;
+    }
+    to {
+        box-shadow: 0 0 25px #ff85a188, 0 0 50px #ff85a155;
+    }
+}
+
+/* HEARTS */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    color: #ff4f8b;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-120vh); opacity: 0; }
+}
+
+/* ANIM */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .dashboard h1 { font-size: 28px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>Happy 1st Anniversary, my love!</header>
+
+<!-- LOGIN -->
+<section id="loginPage">
+    <div class="hero">
+        <h2>Apakah benar kamu duniaku?</h2>
+        <p>Buktikan dengan cinta yang tulus 🤍</p>
+    </div>
+
+    <div class="form-box">
+        <input type="text" id="nama" placeholder="Nama Lengkap">
+        <input type="password" id="password" placeholder="Password Rahasia">
+        <button onclick="login()">Masuk</button>
+    </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="dashboard">
+    <h1 id="namaUser"></h1>
+
+    <div class="photo-box">
+        <img src="cinta.jpeg" alt="Foto Cinta">
+    </div>
+
+    <p>
+        duniaku yang paling sempurna,  
+        terima kasih telah dipertemukan denganmu ✨  
+        kamu adalah rumah, cinta, dan semestaku 🤍
+    </p>
+
+    <div class="photo-box">
+        <img src="cinta 2.jpeg" alt="Foto Cinta">
+    </div>
+
+    <p>
+        🤍terima kasih ya sudah jadi pasanganku🤍
+    </p>
+    <div class="photo-box">
+        <img src="cinta 3.jpeg" alt="Foto Cinta">
+    </div>
+
+    <p>
+        aku tau aku suka bercanda tapi kali ini aku serius aku sayang sama kamu istriku🤍
+    </p>
+    <div class="photo-box">
+        <img src="cinta 4.jpeg" alt="Foto Cinta">
+    </div>
+
+    <p>
+        🤍naila nazwa rahmadhina🤍
+    </p>
+        <div class="photo-box">
+        <img src="cinta 5.jpeg" alt="Foto Cinta">
+    </div>
+
+    <p>
+        🤍aku belum sempurna tapi yang kurasa sempurnaku jika ada kamu🤍
+    </p>
+            <div class="photo-box">
+        <img src="cinta 6.jpeg" alt="Foto Cinta">
+    </div>
+
+    <p>
+        🤍maaf ya aku banyak salah dan susah romantis🤍
+    </p> 
+            <div class="photo-box">
+        <img src="cinta 7.jpeg" alt="Foto Cinta">
+    </div>
+
+    <p>
+        🤍pertemuan kita memang singkat namun cerita kita kurasa akan selamanya🤍
+    </p>
+            <div class="photo-box">
+        <img src="cinta 8.jpeg" alt="Foto Cinta">
+    </div>
+
+    <p>
+        🤍i love you sayangku cintaku istriku🤍
+    </p>
+            <div class="photo-box">
+        <img src="cinta 9.jpeg" alt="Foto Cinta">
+    </div>
+
+    <p>
+        🤍love you mama choco🤍
+    </p>
+    <audio autoplay>
+        <source src="Duniaku.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <button onclick="logout()">Keluar</button>
+</section>
+
+<script>
+// HASH PASSWORD
+async function hashPassword(password) {
+    const enc = new TextEncoder().encode(password);
+    const hash = await crypto.subtle.digest("SHA-256", enc);
+    return [...new Uint8Array(hash)].map(b => b.toString(16).padStart(2,"0")).join("");
+}
+
+// LOGIN
+async function login() {
+    const nama = document.getElementById("nama").value.trim();
+    const pass = document.getElementById("password").value;
+
+    if (!nama || !pass) {
+        alert("Nama dan password wajib diisi");
+        return;
+    }
+
+    const hashed = await hashPassword(pass);
+    localStorage.setItem("nama", nama);
+    localStorage.setItem("pass", hashed);
+    localStorage.setItem("login", "true");
+
+    tampilDashboard();
+}
+
+// DASHBOARD
+function tampilDashboard() {
+    document.getElementById("loginPage").style.display = "none";
+    document.getElementById("dashboard").style.display = "block";
+    document.getElementById("namaUser").innerText =
+        "Hai, " + localStorage.getItem("nama") + " ❤️";
+}
+
+// AUTO LOGIN
+if (localStorage.getItem("login") === "true") {
+    tampilDashboard();
+}
+
+// LOGOUT
+function logout() {
+    localStorage.clear();
+    location.reload();
+}
+
+// HEART PARTICLES
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerText = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (12 + Math.random() * 20) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 6000);
+}, 400);
+</script>
+
+</body>
+</html>
